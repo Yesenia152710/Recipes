@@ -1,0 +1,10 @@
+<button><a href="logout/">Logout</a></button>
+<p><a href="addrecipe/" {{ form }}>Add Recipe</a>
+<p><a href="addauthor/" {{ form }}>Add Author</a>
+
+<h1>World Class Best Recipe's</h1>
+
+{% for stuff in published %}
+<p><a href="recipe/{{ stuff.id }}/">{{ stuff.title }}</a> -
+  by <a href="author/{{ stuff.author.id }}/">{{ stuff.author.au_name }}</a></p>
+{% endfor %}

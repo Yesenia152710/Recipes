@@ -1,0 +1,9 @@
+<p>
+<h1>{{ author }}</h1>
+</p>
+
+{% for stuff in publisher %}
+<p>
+<h3><a href="/recipe/{{ stuff.id }}/">{{ stuff.title }}</a></h3>
+</p>
+{% endfor %}
